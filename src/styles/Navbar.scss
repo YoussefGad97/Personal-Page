@@ -1,0 +1,112 @@
+/* Custom Navbar Styles */
+.custom-navbar {
+  background-color: transparent !important;
+
+  .navbar-brand {
+    font-size: 4rem;
+    color: #DC5741;
+    transition: all 0.3s ease;
+    margin:50px;
+    font-family: "Chakra Petch", sans-serif;
+    margin-top: 10px;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #1ea7f1;
+      text-shadow: 0 0 12px #1ea7f1;
+    }
+  }
+
+  .augmented-link {
+    position: relative;
+    color: #DC5741;
+    font-weight: bold;
+    padding: 12px 30px;
+    margin: 15px 35px;
+    border: 3px solid #DC5741;
+    text-transform: uppercase;
+    text-decoration: none;
+    filter: drop-shadow(0 0 5px #DC5741);
+    transition: all 0.3s ease;
+    border-radius: 8px;
+
+
+    &[data-augmented-ui] {
+      border-width: 3px;
+      border-radius: 3px;
+    }
+
+    &:hover {
+      color: #1ea7f1;
+      border-color: #1ea7f1;
+      filter: drop-shadow(0 0 10px #1ea7f1);
+      transform: translateY(-3px);
+    }
+  }
+
+  .augmented-border {
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+
+    &[data-augmented-ui] {
+      --augmented-ui-border-size: 2px;
+      --augmented-ui-border-color: #ccc;
+      --augmented-ui-padding: 15px;
+      background: transparent;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      --augmented-ui-border-color: #1EA7F1;
+      color: #1EA7F1;
+      transform: translateY(-2px);
+    }
+  }
+
+  .nav-link {
+    position: relative;
+    color: #DC5741;
+    font-family: "Chakra Petch", sans-serif;
+    padding: 10px 15px;
+    margin: 20px 25px;
+    border: 2px solid #DC5741;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: inline-block;
+    text-shadow: 0 0 5px #1ea7f1, 0 0 10px #1ea7f1, 0 0 15px #1ea7f1;
+
+    &:hover {
+      color: #1ea7f1;
+      border-color: #1ea7f1;
+    }
+
+    &.selected {
+      transform: translateX(0) scale(1.2);
+      z-index: 1;
+    }
+
+    &:not(.selected) {
+      transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    &:nth-child(n):not(.selected) {
+      &.left {
+        transform: translateX(-100vw);
+      }
+      &.right {
+        transform: translateX(100vw);
+      }
+    }
+  }
+}
