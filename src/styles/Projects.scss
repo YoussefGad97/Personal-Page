@@ -137,3 +137,112 @@
     opacity: 1;
   }
 } 
+
+.expanded-card-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+
+  .expanded-card {
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #1ea7f1;
+    padding: 2rem;
+    width: 80%;
+    max-width:1500px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .expanded-content {
+      display: flex;
+      gap: 2rem;
+      flex: 1;
+      justify-content: space-between;
+
+      .expanded-image {
+        width: 650px;
+        height: 500px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+      }
+
+      .expanded-details {
+        flex: 1;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        h3 {
+          color: #c1121f;
+          text-align: left;
+        }
+
+        p {
+          text-align: left;
+        }
+
+        .expanded-buttons {
+          display: flex;
+          justify-content: space-between;
+          margin-top: auto;
+          width: 100%;
+
+          button {
+            background: #1ea7f1;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+
+            &:hover {
+              background: #c1121f;
+            }
+
+            &:disabled {
+              background: #1ea7f1;
+              cursor: not-allowed;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} 
+
+.github-link {
+  color: #1ea7f1;
+  text-decoration: underline;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #c1121f;
+  }
+} 
