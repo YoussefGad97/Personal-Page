@@ -3,12 +3,11 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 120px;
-  padding: 120px 20px 20px 20px;
+  padding: 80px 20px 20px 20px;
 
   .cyber-container {
-    background: rgba(59, 0, 0, 0.9);
-    border: 2px solid #DC5741;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid #1ea7f1;
     padding: 3rem;
     color: white;
     position: relative;
@@ -17,27 +16,29 @@
     backdrop-filter: blur(10px);
     transform: translateY(100vh);
     opacity: 0;
-    
+
     &.slide-up {
       animation: slideUp 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
-    
+
     &[data-augmented-ui] {
       --aug-border: 2px;
-      --aug-border-bg: #DC5741;
+      --aug-border-bg: #1ea7f1;
     }
 
     .skills-content {
-      font-family: 'Orbitron', sans-serif;
+      font-family: "Orbitron", sans-serif;
 
       .header {
         font-size: 2rem;
-        color: #DC5741;
+        color: #c1121f;
         margin-bottom: 2rem;
-        border-bottom: 2px solid #DC5741;
+        border-bottom: 2px solid #c1121f;
         padding-bottom: 0.5rem;
         letter-spacing: 2px;
         text-align: center;
+        font-family: "Orbitron", sans-serif;
+        text-transform: uppercase;
       }
 
       .skills-grid {
@@ -52,30 +53,33 @@
 
           .label {
             min-width: 120px;
-            color: #DC5741;
+            color: #c1121f;
             font-size: 1.2rem;
             letter-spacing: 1px;
+            font-family: "Orbitron", sans-serif;
+            text-transform: uppercase;
           }
 
           .progress-container {
             flex: 1;
             height: 30px;
-            background: rgba(220, 87, 65, 0.2);
+            background: rgba(193, 18, 31, 0.2);
             position: relative;
             overflow: hidden;
 
             &[data-augmented-ui] {
               --aug-border: 1px;
-              --aug-border-bg: #DC5741;
+              --aug-border-bg: #c1121f;
             }
 
             .progress-bar {
               height: 100%;
-              background: #DC5741;
+              background: #c1121f;
               width: var(--progress-width);
               transform: scaleX(0);
               transform-origin: left;
-              animation: progressAnimation 2.5s cubic-bezier(0.17, 0.84, 0.44, 1) forwards;
+              animation: progressAnimation 2.5s
+                cubic-bezier(0.17, 0.84, 0.44, 1) forwards;
               animation-delay: 1.2s;
               display: flex;
               align-items: center;
@@ -85,13 +89,20 @@
 
               &[data-augmented-ui] {
                 --aug-border: 1px;
-                --aug-border-bg: #DC5741;
+                --aug-border-bg: #c1121f;
               }
 
               .progress-text {
                 color: white;
                 font-size: 0.9rem;
                 font-weight: bold;
+                font-family: "Orbitron", sans-serif;
+                text-transform: uppercase;
+                font-weight: 500;
+                letter-spacing: 1px;
+                text-shadow: 0 0 10px rgba(30, 167, 241, 0.7),
+                  0 0 20px rgba(30, 167, 241, 0.5),
+                  0 0 30px rgba(30, 167, 241, 0.3);
               }
             }
           }
@@ -127,4 +138,4 @@
     transform: scaleX(1);
     opacity: 1;
   }
-} 
+}
