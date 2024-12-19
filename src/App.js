@@ -5,10 +5,10 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import './App.css';
 
 import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Skills from './pages/Skills';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
+import Home from './Pages/Home';
+import Skills from './Pages/Skills';
+import Projects from './Pages/Projects';
+import Contact from './Pages/Contact';
 
 function App() {
   return (
@@ -22,6 +22,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />

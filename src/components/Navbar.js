@@ -45,7 +45,7 @@ const Navbar = () => {
       <div className="container">
         <div className="row w-100">
           <div className="col-12 text-center">
-            <Link className="navbar-brand mb-0 h1" to="/">Youssef Gad</Link>
+            <Link className="navbar-brand mb-0 h1" to="Home.js">Youssef Gad</Link>
           </div>
           <div className="col-12">
             <div className="navbar-nav justify-content-center" style={{ transform: `translateX(${offset}px)` }}>
