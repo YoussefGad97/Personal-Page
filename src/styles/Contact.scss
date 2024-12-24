@@ -156,3 +156,45 @@
     opacity: 1;
   }
 } 
+
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .cyber-container {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .header {
+    font-size: 1.5rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-section {
+    .contact-form {
+      .form-group {
+        label {
+          font-size: 1rem;
+        }
+
+        input, textarea {
+          font-size: 0.9rem;
+        }
+      }
+
+      .submit-btn {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .map-section {
+    min-height: 300px;
+  }
+} 

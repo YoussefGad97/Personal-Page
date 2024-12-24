@@ -139,3 +139,40 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 768px) {
+  .skills-container {
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .cyber-container {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .header {
+    font-size: 1.5rem;
+  }
+
+  .skills-grid {
+    flex-direction: column;
+  }
+
+  .skill-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .label {
+    font-size: 1rem;
+  }
+
+  .progress-container {
+    height: 20px;
+  }
+
+  .progress-text {
+    font-size: 0.8rem;
+  }
+}
